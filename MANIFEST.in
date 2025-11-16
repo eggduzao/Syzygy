@@ -1,0 +1,18 @@
+
+# Stainalyzer Package
+
+# Include documentation, examples, and tests
+recursive-include Stainalyzer/docs *
+recursive-include Stainalyzer/examples *
+recursive-include Stainalyzer/tests *
+
+# Include important project files
+include Stainalyzer/LICENSE
+include Stainalyzer/pyproject.toml
+include Stainalyzer/requirements.txt
+include Stainalyzer/tox.ini
+
+# Include README and other standard files if needed
+include README.md
+include setup.py
+

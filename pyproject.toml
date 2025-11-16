@@ -1,0 +1,47 @@
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Bloom"
+version = "0.1.0"
+description = "A Python package for processing and analyzing chromatin conformation data (3C, 4C, 5C, Hi-C, and scHi-C)."
+readme = "README.md"
+authors = [
+    { name = "Eduardo Gusmão", email = "egusmao@example.com" }
+]
+license = { file = "LICENSE" }
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "pandas",
+    "torch",
+    "torchvision",
+    "scikit-learn",
+    "cooler",
+    "hicstraw",
+    "pyBigWig"
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "flake8",
+    "mypy"
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "myst-parser"
+]
+
+[project.scripts]
+bloom = "bloom.__main__:main"
+
+[tool.setuptools]
+packages = ["bloom", "bloom.models", "bloom.training", "bloom.utils", "bloom.evaluation"]
